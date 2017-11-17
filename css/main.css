@@ -1,0 +1,16 @@
+body {
+	background-color: green;
+}
+
+#quote-box {
+	height: 250px;
+	width: 450px;
+	background-color: #FFF;
+	margin-top: 150px;
+	border-radius: 15px;
+	text-align: center;
+}
+
+#quote {
+	background-color: green;
+}
