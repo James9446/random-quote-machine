@@ -9,20 +9,6 @@ function getRandomNumber(upper) {
 	}
 }
 
-// Selects and displays the quote
-function showQuote() {
-	// Sets a variable with the object (i.e. wise) in quotes object, that was specified by radio selection
-	var quoteObject = quoteType();
-	// variable used to select a random quote from the quote object
-	var randomNumber = getRandomNumber(quotes[quoteObject].length);
-	var quote   = document.getElementById('quote');
-	var credit   = document.getElementById('credit');
-	// sets the text of the h1 with id 'quote' to the specified object in the quotes and randonmly chooses one its entries
-	quote.innerText = "\"" + quotes[quoteObject][randomNumber].text + "\"";
-	// does the same as above but for the corresponding p tag with id 'credit'
-	credit.innerText = quotes[quoteObject][randomNumber].credit;
-}
-
 // Creates a matching random color for quote text, credit text, page backgrond, and button background 
 function randomColor() {
 	var red = Math.floor(Math.random() * 256 );
@@ -50,6 +36,36 @@ function quoteType() {
 		}
 	}
 	return quoteType;
+}
+
+// Used to randomly choose a quote category if all is the selection
+function allQuotes() {
+	var randomNumber = getRandomNumber(3);
+	if (randomNumber === 0) {
+		return "wise";
+	} else if (randomNumber === 1) {
+		return "funny";
+	} else {
+		return "movie";
+	}
+}
+
+// Selects and displays the quote
+function showQuote() {
+	// Sets a variable with the category object (i.e. wise) in quotes object, that was specified by radio selection
+	var quoteObject = quoteType();
+	// If 'all' is the selected category then the variale is randaomly set using the allQuotes()
+	if (quoteObject === "all") {
+		quoteObject = allQuotes();
+	}
+	// variable used to select a random quote from the quote object
+	var randomNumber = getRandomNumber(quotes[quoteObject].length);
+	var quote   = document.getElementById('quote');
+	var credit   = document.getElementById('credit');
+	// sets the text of the h1 with id 'quote' to the specified object in the quotes and randonmly chooses one its entries
+	quote.innerText = "\"" + quotes[quoteObject][randomNumber].text + "\"";
+	// does the same as above but for the corresponding p tag with id 'credit'
+	credit.innerText = quotes[quoteObject][randomNumber].credit;
 }
 
 // quotes object for storing all quotes according to their category 
@@ -110,11 +126,7 @@ quotes = {
 	]
 }
 
-
-
-
-
-
+// Event listeners both set to the same button, top is to display text, bottom is to display color
 document.getElementById('quote-button').addEventListener('click', showQuote, false);
 document.getElementById('quote-button').addEventListener('click', randomColor, false);
 

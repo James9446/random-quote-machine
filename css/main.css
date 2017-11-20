@@ -2,6 +2,10 @@ body {
 	background-color: green;
 }
 
+.form-group {
+	color: #FFF;
+}
+
 #quote-box {
 	height: 350px;
 	width: 650px;
