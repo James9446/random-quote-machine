@@ -66,63 +66,143 @@ function showQuote() {
 	// sets the text of the h1 with id 'quote' to the specified object in the quotes and randonmly chooses one its entries
 	quote.innerText = "\"" + quotes[quoteObject][randomNumber].text + "\"";
 	// does the same as above but for the corresponding p tag with id 'credit'
-	credit.innerText = quotes[quoteObject][randomNumber].credit;
+	credit.innerText = "- " + quotes[quoteObject][randomNumber].credit;
 }
 
 // quotes object for storing all quotes according to their category 
 var quotes = {
 	wise: [
 		{
-			text: "An investment in knowledge pays the best interest.",
-			credit: "Benjamin Franklin"
+			text: "Success is not final,\nfailure is not fatal:\nit is the courage\nto continue that counts.",
+			credit: "Winston Churchill"
 		},
 		{
-			text: "I know the world isn't fair, but why isn't it ever unfair in my favor?",
-			credit: "Bill Watterson"
+			text: "Kites rise highest against the wind - not with it.",
+			credit: "Winston Churchill"
+		},
+		{
+			text: "The pessimist sees difficulty in every opportunity. The optimist sees the opportunity in every difficulty.",
+			credit: "Winston Churchill"
+		},
+		{
+			text: "Either write something worth reading or do something worth writing.",
+			credit: "Benjamin Franklin"
 		},
 		{
 			text: "Tell me and I forget.\nTeach me and I remember.\nInvolve me and I learn.",
 			credit: "Benjamin Franklin"
 		},
 		{
-			text: "Success is not final,\nfailure is not fatal:\nit is the courage\nto continue that counts.",
-			credit: "Winston Churchill"
+			text: "An investment in knowledge pays the best interest.",
+			credit: "Benjamin Franklin"
+		},
+		{
+			text: "It takes many good deeds to build a good reputation, and only one bad one to lose it.",
+			credit: "Benjamin Franklin"
+		},
+		{
+			text: "Half a truth is often a great lie",
+			credit: "Benjamin Franklin"
+		},
+		{
+			text: "The secret of getting ahead is getting started.",
+			credit: "Mark Twain"
+		},
+		{
+			text: "Patriotism is supporting your country all the time, and your government when it deserves it.",
+			credit: "Mark Twain"
+		},
+		{
+			text: "It is better to keep your mouth closed and let people think you are a fool than to open it and remove all doubt.",
+			credit: "Mark Twain"
 		}
 	],
 	funny: [
 		{
-			text: "1 funny",
-			credit: "1 funny credit"
+			text: "I am fond of pigs. Dogs look up to us. Cats look down on us. Pigs treat us as equals.",
+			credit: "Winston Churchill"
 		},
 		{
-			text: "2 funny",
-			credit: "2 funny credit"
+			text: "I may be drunk, Miss, but in the morning I will be sober and you will still be ugly.",
+			credit: "Winston Churchill"
 		},
 		{
-			text: "3 funny",
-			credit: "3 funny credit"
+			text: "The best argument against democracy is a five-minute conversation with the average voter.",
+			credit: "Winston Churchill"
 		},
 		{
-			text: "4 funny",
-			credit: "4 funny credit"
+			text: "I know the world isn't fair, but why isn't it ever unfair in my favor?",
+			credit: "Bill Watterson"
+		},
+		{
+			text: "Always remember that you are absolutely unique. Just like everyone else.",
+			credit: "Margaret Mead"
+		},
+		{
+			text: "Happiness is having a large, loving, caring, close-knit family in another city.",
+			credit: "George Burns"
+		},
+		{
+			text: "When someone hands you a flyer, it's like they're saying here you throw this away.",
+			credit: "Mitch Hedberg"
+		},
+		{
+			text: "Fettucini alfredo is macaroni and cheese for adults.",
+			credit: "Mitch Hedberg"
+		},
+		{
+			text: "I would imagine that if you could understand Morse code, a tap dancer would drive you crazy.",
+			credit: "Mitch Hedberg"
+		},
+		{
+			text: "The depressing thing about tennis is that no matter how good I get, I'll never be as good as a wall.",
+			credit: "Mitch Hedberg"
 		}
 	], 
 	movie: [
 		{
-			text: "1 movie",
-			credit: "1 movie credit"
+			text: "You’re gonna need a bigger boat",
+			credit: "Jaws, 1975"
 		},
 		{
-			text: "2 movie",
-			credit: "2 movie credit"
+			text: "You talkin’ to me?",
+			credit: "Taxi Driver, 1976"
 		},
 		{
-			text: "3 movie",
-			credit: "3 movie credit"
+			text: "Hello. My name is Inigo Montoya. You killed my father. Prepare to die.",
+			credit: "The Princess Bride, 1987"
 		},
 		{
-			text: "4 movie",
-			credit: "4 movie credit"
+			text: "I’ll have what she’s having",
+			credit: "When Harry Met Sally, 1989"
+		},
+		{
+			text: "I’ll be back",
+			credit: "The Terminator, 1984"
+		},
+		{
+			text: "Yippie-ki-yay, mother f**ker!",
+			credit: "Die Hard, 1988"
+		},
+		{
+			text: "Leave the gun, take the cannoli",
+			credit: "The Godfather, 1972"
+		},
+		{
+			text: "I’m having an old friend for dinner",
+			credit: "The Silence of the Lambs, 1991"
+		},
+		{
+			text: "The Dude abides",
+			credit: "The Big Lebowski, 1998"
+		},
+		{
+			text: "That’ll do, pig, that’ll do",
+			credit: "Babe, 1995"
+		},
+		{
+			text: "Gentlemen, you can't fight in here! This is the war room!",
+			credit: "Dr Strangelove, 1964"
 		}
 	]
 };
