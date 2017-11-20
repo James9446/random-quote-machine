@@ -4,20 +4,24 @@ body {
 
 .form-group {
 	color: #FFF;
+	margin-top: 30px;
 }
 
 #quote-box {
 	height: 350px;
 	width: 650px;
 	background-color: #FFF;
-	margin-top: 150px;
+	margin-top: 10px;
 	border-radius: 15px;
 	text-align: center;
 }
 
 #credit {
+	font-style: italic;
 	text-align: right;
+	margin-top: -20px;
 	padding-right: 20px;
+	padding-bottom: 10px;
 }
 
 #quote {
