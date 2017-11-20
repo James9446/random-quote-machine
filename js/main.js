@@ -11,8 +11,9 @@ function getRandomNumber(upper) {
 
 // Creates a matching random color for quote text, credit text, page backgrond, and button background 
 function randomColor() {
+	// green color max parameter taken down from 256 to 156 to remove undesirable colors
 	var red = Math.floor(Math.random() * 256 );
-	var green = Math.floor(Math.random() * 256 );
+	var green = Math.floor(Math.random() * 156 );
 	var blue = Math.floor(Math.random() * 256 );
 	var rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
 	document.getElementById('quote').style.color = rgbColor;
@@ -69,7 +70,7 @@ function showQuote() {
 }
 
 // quotes object for storing all quotes according to their category 
-quotes = {
+var quotes = {
 	wise: [
 		{
 			text: "An investment in knowledge pays the best interest.",
@@ -124,7 +125,7 @@ quotes = {
 			credit: "4 movie credit"
 		}
 	]
-}
+};
 
 // Event listeners both set to the same button, top is to display text, bottom is to display color
 document.getElementById('quote-button').addEventListener('click', showQuote, false);
